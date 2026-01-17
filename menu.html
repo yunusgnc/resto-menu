@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restaurant Menü</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      --card: rgba(28, 28, 28, 0.8);
+      --card-hover: rgba(40, 40, 40, 0.9);
+      --text: #f5f5f5;
+      --muted: #aaa;
+      --accent: #d4af37;
+      --accent-light: #f4d03f;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --shadow-hover: 0 16px 48px rgba(212, 175, 55, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      background-image: var(--bg-gradient);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    header {
+      text-align: center;
+      padding: clamp(30px, 5vw, 60px) 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(10, 10, 10, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+    }
+    
+    @supports (backdrop-filter: blur(10px)) {
+      header {
+        backdrop-filter: blur(10px);
+        background: rgba(10, 10, 10, 0.7);
+      }
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-transform: uppercase;
+      animation: fadeInDown 0.8s ease;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: clamp(30px, 4vw, 60px) clamp(16px, 4vw, 40px);
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    #menu-container {
+      min-height: 200px;
+    }
+
+    .category {
+      margin-bottom: clamp(40px, 6vw, 80px);
+      animation: fadeInUp 0.6s ease;
+      animation-fill-mode: both;
+    }
+
+    .category:nth-child(1) { animation-delay: 0.1s; }
+    .category:nth-child(2) { animation-delay: 0.2s; }
+    .category:nth-child(3) { animation-delay: 0.3s; }
+    .category:nth-child(4) { animation-delay: 0.4s; }
+    .category:nth-child(5) { animation-delay: 0.5s; }
+    .category:nth-child(6) { animation-delay: 0.6s; }
+    .category:nth-child(7) { animation-delay: 0.7s; }
+    .category:nth-child(8) { animation-delay: 0.8s; }
+    .category:nth-child(9) { animation-delay: 0.9s; }
+    .category:nth-child(10) { animation-delay: 1.0s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .category h2 {
+      border-left: 5px solid var(--accent);
+      padding-left: 20px;
+      margin-bottom: clamp(20px, 4vw, 32px);
+      font-weight: 600;
+      font-size: clamp(22px, 4vw, 32px);
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .category h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 60%;
+      background: var(--accent);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .subcategory-title {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 500;
+      margin: clamp(24px, 4vw, 32px) 0 clamp(16px, 3vw, 24px) 0;
+      padding-left: 16px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+      gap: clamp(16px, 3vw, 32px);
+    }
+
+    @media (max-width: 640px) {
+      .items {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      
+      .item {
+        border-radius: 16px;
+      }
+      
+      .item img {
+        height: 180px;
+      }
+      
+      section {
+        padding: 20px 12px;
+      }
+      
+      header {
+        padding: 20px 12px;
+      }
+      
+      .category h2 {
+        font-size: 20px;
+        padding-left: 12px;
+      }
+      
+      .item .content {
+        padding: 16px;
+      }
+      
+      .item h3 {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .items {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+    }
+
+    .item {
+      background: var(--card);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      cursor: pointer;
+      min-width: 0;
+      width: 100%;
+    }
+    
+    @supports (backdrop-filter: blur(10px)) {
+      .item {
+        backdrop-filter: blur(10px);
+      }
+    }
+
+    .item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      z-index: 1;
+    }
+
+    .item:hover::before {
+      transform: scaleX(1);
+    }
+
+    .item:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+      background: var(--card-hover);
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+
+    .item img {
+      width: 100%;
+      height: clamp(200px, 25vw, 250px);
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+      transition: all 0.4s ease;
+    }
+
+    .item:hover img {
+      transform: scale(1.1);
+    }
+
+    .item .content {
+      padding: clamp(16px, 3vw, 24px);
+      position: relative;
+    }
+
+    .item h3 {
+      margin: 0;
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 600;
+      color: var(--text);
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .item h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+
+    .item:hover h3::after {
+      width: 50px;
+    }
+
+    footer {
+      text-align: center;
+      padding: clamp(25px, 4vw, 40px);
+      color: var(--muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: clamp(12px, 2vw, 14px);
+      background: rgba(10, 10, 10, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Loading animation for images */
+    .item img[loading="lazy"] {
+      opacity: 0;
+      animation: fadeInImage 0.8s ease forwards;
+    }
+
+    @keyframes fadeInImage {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Smooth image loading */
+    .item img {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 480px) {
+      header {
+        padding: 25px 15px;
+      }
+
+      section {
+        padding: 25px 15px;
+      }
+
+      .category h2 {
+        padding-left: 15px;
+        font-size: 20px;
+      }
+
+      .item {
+        border-radius: 16px;
+      }
+
+      .item img {
+        height: 180px;
+      }
+    }
+
+    /* Tablet optimizations */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .items {
+        gap: 24px;
+      }
+    }
+
+    /* Large screen optimizations */
+    @media (min-width: 1400px) {
+      .items {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MENÜ</h1>
+</header>
+
+<section id="menu-container">
+  <!-- Menü yükleniyor... -->
+  <div style="text-align: center; padding: 40px; color: var(--muted);" id="loading-message">Menü yükleniyor...</div>
+</section>
+
+<script>
+  // Menü verileri doğrudan burada
+  const menuData = {
+  "categories": [
+    {
+      "id": "kahvaltilar",
+      "title": "Kahvaltılar",
+      "items": [
+        {
+          "name": "Serpme Kahvaltı (2 Kişilik)",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "Serpme Kahvaltı"
+        },
+        {
+          "name": "Kahvaltı Tabağı",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "Kahvaltı Tabağı"
+        }
+      ]
+    },
+    {
+      "id": "kahvalti-ekstralari",
+      "title": "Kahvaltı Ekstraları",
+      "items": [
+        {
+          "name": "Kuymak (Küçük)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuymak"
+        },
+        {
+          "name": "Kuymak (Büyük)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuymak Büyük"
+        },
+        {
+          "name": "Menemen (Küçük)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "Menemen"
+        },
+        {
+          "name": "Menemen (Büyük)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "Menemen Büyük"
+        },
+        {
+          "name": "Et Kavurma (Küçük)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Et Kavurma"
+        },
+        {
+          "name": "Et Kavurma (Büyük)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Et Kavurma Büyük"
+        },
+        {
+          "name": "Kaygana Sade",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana Sade"
+        },
+        {
+          "name": "Kaygana Kaşarlı",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana Kaşarlı"
+        },
+        {
+          "name": "Haşlanmış Yumurta",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Haşlanmış Yumurta"
+        },
+        {
+          "name": "Sahanda Yumurta",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Sahanda Yumurta"
+        },
+        {
+          "name": "Sucuklu Yumurta",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Sucuklu Yumurta"
+        },
+        {
+          "name": "Sucuk Tava",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Sucuk Tava"
+        },
+        {
+          "name": "Sigara Böreği",
+          "image": "https://images.unsplash.com/photo-1609501676725-7186f3a1f24f?w=600&h=400&fit=crop&q=80",
+          "alt": "Sigara Böreği"
+        },
+        {
+          "name": "Peynir Tabağı",
+          "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80",
+          "alt": "Peynir Tabağı"
+        }
+      ]
+    },
+    {
+      "id": "gozlemeler",
+      "title": "Gözlemeler",
+      "items": [
+        {
+          "name": "Gözleme (Peynirli)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "Gözleme Peynirli"
+        },
+        {
+          "name": "Gözleme (Patates)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "Gözleme Patates"
+        }
+      ]
+    },
+    {
+      "id": "salatalar",
+      "title": "Salatalar",
+      "items": [
+        {
+          "name": "Çoban Salata",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Çoban Salata"
+        },
+        {
+          "name": "Mevsim Salata",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Mevsim Salata"
+        },
+        {
+          "name": "Karışık Salata",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Karışık Salata"
+        },
+        {
+          "name": "Piyaz",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Piyaz"
+        }
+      ]
+    },
+    {
+      "id": "hamburger",
+      "title": "Hamburger",
+      "items": []
+    },
+    {
+      "id": "corbalar",
+      "title": "Çorbalar",
+      "items": [
+        {
+          "name": "Ezogelin",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "Ezogelin Çorbası"
+        },
+        {
+          "name": "Karalahana Çorbası",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "Karalahana Çorbası"
+        },
+        {
+          "name": "Balık Çorbası",
+          "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=600&h=400&fit=crop&q=80",
+          "alt": "Balık Çorbası"
+        }
+      ]
+    },
+    {
+      "id": "izgaralar",
+      "title": "Izgaralar",
+      "items": [
+        {
+          "name": "Akçaabat Köfte (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Akçaabat Köfte 1 kg"
+        },
+        {
+          "name": "Akçaabat Köfte (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Akçaabat Köfte Porsiyon"
+        },
+        {
+          "name": "Kuzu Pirzola (1 kg)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuzu Pirzola 1 kg"
+        },
+        {
+          "name": "Kuzu Pirzola (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuzu Pirzola Porsiyon"
+        },
+        {
+          "name": "Tavuk Şiş (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Tavuk Şiş Porsiyon"
+        },
+        {
+          "name": "Et Şiş (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Et Şiş Porsiyon"
+        },
+        {
+          "name": "Kuzu Şiş (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuzu Şiş Porsiyon"
+        },
+        {
+          "name": "Saç Kavurma (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Saç Kavurma Porsiyon"
+        },
+        {
+          "name": "Tavuk Kavurma (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Tavuk Kavurma Porsiyon"
+        },
+        {
+          "name": "Dana Pirzola (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Dana Pirzola 1 kg"
+        },
+        {
+          "name": "Dana Pirzola (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Dana Pirzola Porsiyon"
+        },
+        {
+          "name": "Tavuk Izgara (1 kg)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Tavuk Izgara 1 kg"
+        },
+        {
+          "name": "Tavuk Izgara (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Tavuk Izgara Porsiyon"
+        },
+        {
+          "name": "Kanat Izgara (1 kg)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Kanat Izgara 1 kg"
+        },
+        {
+          "name": "Kanat Izgara (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Kanat Izgara Porsiyon"
+        },
+        {
+          "name": "Karışık Izgara (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Karışık Izgara 1 kg"
+        },
+        {
+          "name": "Karışık Izgara (Porsiyon)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Karışık Izgara Porsiyon"
+        }
+      ]
+    },
+    {
+      "id": "deniz-urunleri",
+      "title": "Deniz Ürünleri",
+      "items": [
+        {
+          "name": "Levrek Kaşarlı",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Levrek Kaşarlı"
+        },
+        {
+          "name": "Levrek Buğlama",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Levrek Buğlama"
+        },
+        {
+          "name": "Levrek Izgara",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Levrek Izgara"
+        },
+        {
+          "name": "Mezgit Tava",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Mezgit Tava"
+        },
+        {
+          "name": "Mezgit Buğlama",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Mezgit Buğlama"
+        },
+        {
+          "name": "İstavrit Tava",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "İstavrit Tava"
+        },
+        {
+          "name": "Barbun",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Barbun"
+        },
+        {
+          "name": "Çipura",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Çipura"
+        },
+        {
+          "name": "Palamut",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Palamut"
+        },
+        {
+          "name": "Somon",
+          "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&h=400&fit=crop&q=80",
+          "alt": "Somon"
+        },
+        {
+          "name": "Alabalık",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Alabalık"
+        }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "title": "Tatlılar",
+      "items": [
+        {
+          "name": "Baklava",
+          "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&h=400&fit=crop&q=80",
+          "alt": "Baklava"
+        },
+        {
+          "name": "Fırın Sütlaç",
+          "image": "https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=600&h=400&fit=crop&q=80",
+          "alt": "Fırın Sütlaç"
+        },
+        {
+          "name": "Sütlü Kadayıf",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "Sütlü Kadayıf"
+        },
+        {
+          "name": "Kabak Tatlısı",
+          "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&h=400&fit=crop&q=80",
+          "alt": "Kabak Tatlısı"
+        },
+        {
+          "name": "Künefe",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "Künefe"
+        },
+        {
+          "name": "Kızarmış Dondurma",
+          "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&h=400&fit=crop&q=80",
+          "alt": "Kızarmış Dondurma"
+        }
+      ]
+    },
+    {
+      "id": "icecekler",
+      "title": "İçecekler",
+      "subcategories": [
+        {
+          "name": "Sıcak İçecekler",
+          "items": [
+            {
+              "name": "Çay",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Çay"
+            },
+            {
+              "name": "Semover Çay (Küçük)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Semover Çay Küçük"
+            },
+            {
+              "name": "Semover Çay (Büyük)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Semover Çay Büyük"
+            },
+            {
+              "name": "Bitki Çay",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Bitki Çay"
+            },
+            {
+              "name": "Salep",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Salep"
+            },
+            {
+              "name": "Nescafe",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "Nescafe"
+            },
+            {
+              "name": "Türk Kahvesi",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "Türk Kahvesi"
+            }
+          ]
+        },
+        {
+          "name": "Soğuk İçecekler",
+          "items": [
+            {
+              "name": "Cola - Fanta",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Cola Fanta"
+            },
+            {
+              "name": "Meyve Suyu",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Meyve Suyu"
+            },
+            {
+              "name": "Ice Tea",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ice Tea"
+            },
+            {
+              "name": "Soda (Sade)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Soda Sade"
+            },
+            {
+              "name": "Soda (Meyveli)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Soda Meyveli"
+            },
+            {
+              "name": "Ayran (Büyük)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ayran Büyük"
+            },
+            {
+              "name": "Ayran (Küçük)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ayran Küçük"
+            },
+            {
+              "name": "Su (Büyük)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Su Büyük"
+            },
+            {
+              "name": "Su (Küçük)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Su Küçük"
+            },
+            {
+              "name": "Şalgam",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Şalgam"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gayeli-kuru-fasulye",
+      "title": "Meşhur Gayeli Kuru Fasulye",
+      "items": [
+        {
+          "name": "Tereyağlı Pilav",
+          "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop&q=80",
+          "alt": "Tereyağlı Pilav"
+        },
+        {
+          "name": "Yoğurt",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "Yoğurt"
+        },
+        {
+          "name": "Cacık",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "Cacık"
+        },
+        {
+          "name": "Turşu",
+          "image": "https://images.unsplash.com/photo-1570626097332-50c1e7eeb42b?w=600&h=400&fit=crop&q=80",
+          "alt": "Turşu"
+        }
+      ]
+    },
+    {
+      "id": "yoresel",
+      "title": "Yöresel",
+      "items": [
+        {
+          "name": "Lahana Sarma",
+          "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=400&fit=crop&q=80",
+          "alt": "Lahana Sarma"
+        },
+        {
+          "name": "Turşu Kavurması",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Turşu Kavurması"
+        },
+        {
+          "name": "Kaygana",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana"
+        }
+      ]
+    },
+    {
+      "id": "nargile",
+      "title": "Nargile",
+      "items": []
+    }
+  ]
+};
+
+  function loadMenu() {
+    try {
+      // Önce menuData'nın var olduğunu kontrol et
+      if (typeof menuData === 'undefined') {
+        throw new Error('menuData tanımlı değil!');
+      }
+      
+      const data = menuData;
+      const container = document.getElementById('menu-container');
+      
+      if (!container) {
+        throw new Error('menu-container elementi bulunamadı!');
+      }
+      
+      // Loading mesajını kaldır
+      const loadingMsg = document.getElementById('loading-message');
+      if (loadingMsg) {
+        loadingMsg.remove();
+      }
+      
+      // Container'ı temizle (eğer zaten yüklenmişse tekrar yüklenmesin)
+      if (container.children.length > 0 && container.querySelector('.category')) {
+        return;
+      }
+
+      if (!data || !data.categories || !Array.isArray(data.categories)) {
+        throw new Error('Menü verileri geçersiz veya boş!');
+      }
+      
+      if (data.categories.length === 0) {
+        throw new Error('Kategori bulunamadı!');
+      }
+
+      data.categories.forEach((category, categoryIndex) => {
+        // Kategori container'ı oluştur
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'category';
+        
+        // Kategori başlığı
+        const categoryTitle = document.createElement('h2');
+        categoryTitle.textContent = category.title;
+        categoryDiv.appendChild(categoryTitle);
+
+        // Alt kategoriler varsa (İçecekler gibi)
+        if (category.subcategories) {
+          category.subcategories.forEach(subcategory => {
+            const subcategoryTitle = document.createElement('h3');
+            subcategoryTitle.className = 'subcategory-title';
+            subcategoryTitle.textContent = subcategory.name;
+            categoryDiv.appendChild(subcategoryTitle);
+
+            const itemsDiv = createItemsContainer(subcategory.items);
+            categoryDiv.appendChild(itemsDiv);
+          });
+        } else {
+          // Normal kategoriler için
+          if (category.items && category.items.length > 0) {
+            const itemsDiv = createItemsContainer(category.items);
+            categoryDiv.appendChild(itemsDiv);
+          }
+        }
+
+        container.appendChild(categoryDiv);
+      });
+    } catch (error) {
+      console.error('Menü yüklenirken hata oluştu:', error);
+      const container = document.getElementById('menu-container');
+      if (container) {
+        const errorMsg = error ? error.message : 'Bilinmeyen hata';
+        container.innerHTML = 
+          '<div style="text-align: center; padding: 40px; color: #ff6b6b; background: rgba(255,107,107,0.1); border-radius: 10px; margin: 20px;">' +
+          '<p style="font-size: 18px; margin-bottom: 10px;">⚠️ Menü yüklenirken bir hata oluştu</p>' +
+          '<p style="font-size: 14px; color: var(--muted);">Hata: ' + errorMsg + '</p>' +
+          '<p style="font-size: 14px; color: var(--muted); margin-top: 10px;">Lütfen sayfayı yenileyin veya tekrar deneyin.</p>' +
+          '</div>';
+      }
+    }
+  }
+
+  function createItemsContainer(items) {
+    const itemsDiv = document.createElement('div');
+    itemsDiv.className = 'items';
+
+    items.forEach(item => {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'item';
+
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.alt;
+      img.loading = 'lazy';
+      itemDiv.appendChild(img);
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'content';
+
+      const h3 = document.createElement('h3');
+      h3.textContent = item.name;
+      contentDiv.appendChild(h3);
+
+      itemDiv.appendChild(contentDiv);
+      itemsDiv.appendChild(itemDiv);
+    });
+
+    return itemsDiv;
+  }
+
+  // iOS için daha güvenilir yükleme sistemi
+  function showError(msg) {
+    const container = document.getElementById('menu-container');
+    if (container) {
+      container.innerHTML = '<div style="text-align: center; padding: 40px; color: #ff6b6b; background: rgba(255,107,107,0.1); border-radius: 10px; margin: 20px;"><p style="font-size: 16px; line-height: 1.5;">⚠️ ' + msg + '</p></div>';
+    }
+    console.error('Menü Hatası:', msg);
+  }
+  
+  function initMenuSystem() {
+    try {
+      // Test 1: menuData var mı?
+      if (typeof menuData === 'undefined') {
+        showError('menuData tanımlı değil! JSON verisi yüklenemedi.');
+        return false;
+      }
+      
+      // Test 2: menuData geçerli mi?
+      if (!menuData || typeof menuData !== 'object') {
+        showError('menuData geçersiz! Veri formatı hatalı.');
+        return false;
+      }
+      
+      // Test 3: categories var mı?
+      if (!menuData.categories || !Array.isArray(menuData.categories)) {
+        showError('Kategoriler bulunamadı! Menü verisi eksik.');
+        return false;
+      }
+      
+      // Test 4: container var mı?
+      const container = document.getElementById('menu-container');
+      if (!container) {
+        showError('menu-container elementi bulunamadı! HTML hatası.');
+        return false;
+      }
+      
+      // Test 5: Zaten yüklenmiş mi?
+      if (container.querySelector('.category')) {
+        return true; // Zaten yüklenmiş
+      }
+      
+      // Loading mesajını kaldır
+      const loadingMsg = document.getElementById('loading-message');
+      if (loadingMsg) {
+        loadingMsg.remove();
+      }
+      
+      // Menüyü yükle
+      loadMenu();
+      return true;
+      
+    } catch (e) {
+      const errorMsg = e.message || String(e);
+      showError('Beklenmeyen hata: ' + errorMsg);
+      console.error('Hata detayı:', e);
+      return false;
+    }
+  }
+  
+  // iOS Safari için güvenilir yükleme - birden fazla deneme
+  function tryLoadMenu() {
+    var attempts = 0;
+    var maxAttempts = 10;
+    
+    function attemptLoad() {
+      attempts++;
+      if (initMenuSystem()) {
+        return; // Başarılı
+      }
+      
+      if (attempts < maxAttempts) {
+        setTimeout(attemptLoad, 200 * attempts); // Her denemede daha uzun bekle
+      } else {
+        showError('Menü yüklenemedi. Lütfen sayfayı yenileyin.');
+      }
+    }
+    
+    attemptLoad();
+  }
+  
+  // Yükleme stratejisi - iOS Safari için
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryLoadMenu);
+  } else if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    // DOM zaten hazır
+    tryLoadMenu();
+  } else {
+    // Fallback
+    window.addEventListener('load', tryLoadMenu);
+  }
+  
+  // Ekstra güvenlik için window.onload
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const container = document.getElementById('menu-container');
+      if (container && !container.querySelector('.category') && !container.querySelector('.error')) {
+        tryLoadMenu();
+      }
+    }, 500);
+  });
+</script>
+
+<footer>
+  © 2026 Restoran Menü
+</footer>
+
+</body>
+</html>

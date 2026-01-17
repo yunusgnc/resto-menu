@@ -1,0 +1,505 @@
+{
+  "categories": [
+    {
+      "id": "kahvaltilar",
+      "title": "Breakfast",
+      "items": [
+        {
+          "name": "Mixed Breakfast (for 2)",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "Mixed Breakfast (for 2)"
+        },
+        {
+          "name": "Breakfast Plate",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "Breakfast Plate"
+        }
+      ]
+    },
+    {
+      "id": "kahvalti-ekstralari",
+      "title": "Breakfast Extras",
+      "items": [
+        {
+          "name": "Kuymak (Small)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuymak (Small)"
+        },
+        {
+          "name": "Kuymak (Large)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "Kuymak (Large)"
+        },
+        {
+          "name": "Menemen (Small)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "Menemen (Small)"
+        },
+        {
+          "name": "Menemen (Large)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "Menemen (Large)"
+        },
+        {
+          "name": "Sautéed Meat (Small)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Sautéed Meat (Small)"
+        },
+        {
+          "name": "Sautéed Meat (Large)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Sautéed Meat (Large)"
+        },
+        {
+          "name": "Kaygana (Plain)",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana (Plain)"
+        },
+        {
+          "name": "Kaygana (With Cheese)",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana (With Cheese)"
+        },
+        {
+          "name": "Boiled Egg",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Boiled Egg"
+        },
+        {
+          "name": "Eggs in a Pan",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Eggs in a Pan"
+        },
+        {
+          "name": "Eggs with Sucuk",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "Eggs with Sucuk"
+        },
+        {
+          "name": "Pan-Fried Sucuk",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Pan-Fried Sucuk"
+        },
+        {
+          "name": "Sigara Böreği (Crispy Rolls)",
+          "image": "https://images.unsplash.com/photo-1609501676725-7186f3a1f24f?w=600&h=400&fit=crop&q=80",
+          "alt": "Sigara Böreği (Crispy Rolls)"
+        },
+        {
+          "name": "Cheese Plate",
+          "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80",
+          "alt": "Cheese Plate"
+        }
+      ]
+    },
+    {
+      "id": "gozlemeler",
+      "title": "Gozleme",
+      "items": [
+        {
+          "name": "Gozleme (Cheese)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "Gozleme (Cheese)"
+        },
+        {
+          "name": "Gozleme (Potato)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "Gozleme (Potato)"
+        }
+      ]
+    },
+    {
+      "id": "salatalar",
+      "title": "Salads",
+      "items": [
+        {
+          "name": "Shepherd's Salad",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Shepherd's Salad"
+        },
+        {
+          "name": "Seasonal Salad",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Seasonal Salad"
+        },
+        {
+          "name": "Mixed Salad",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Mixed Salad"
+        },
+        {
+          "name": "Piyaz (Bean Salad)",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "Piyaz (Bean Salad)"
+        }
+      ]
+    },
+    {
+      "id": "hamburger",
+      "title": "Hamburger",
+      "items": []
+    },
+    {
+      "id": "corbalar",
+      "title": "Soups",
+      "items": [
+        {
+          "name": "Ezogelin Soup",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "Ezogelin Soup"
+        },
+        {
+          "name": "Collard Greens Soup",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "Collard Greens Soup"
+        },
+        {
+          "name": "Fish Soup",
+          "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=600&h=400&fit=crop&q=80",
+          "alt": "Fish Soup"
+        }
+      ]
+    },
+    {
+      "id": "izgaralar",
+      "title": "Grilled Dishes",
+      "items": [
+        {
+          "name": "Akçaabat Köfte (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Akçaabat Köfte (1 kg)"
+        },
+        {
+          "name": "Akçaabat Köfte (Portion)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Akçaabat Köfte (Portion)"
+        },
+        {
+          "name": "Lamb Chops (1 kg)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Lamb Chops (1 kg)"
+        },
+        {
+          "name": "Lamb Chops (Portion)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Lamb Chops (Portion)"
+        },
+        {
+          "name": "Chicken Shish (Portion)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Chicken Shish (Portion)"
+        },
+        {
+          "name": "Beef Shish (Portion)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Beef Shish (Portion)"
+        },
+        {
+          "name": "Lamb Shish (Portion)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "Lamb Shish (Portion)"
+        },
+        {
+          "name": "Saç Kavurma (Portion)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Saç Kavurma (Portion)"
+        },
+        {
+          "name": "Chicken Sauté (Portion)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Chicken Sauté (Portion)"
+        },
+        {
+          "name": "Beef Chops (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Beef Chops (1 kg)"
+        },
+        {
+          "name": "Beef Chops (Portion)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Beef Chops (Portion)"
+        },
+        {
+          "name": "Grilled Chicken (1 kg)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Grilled Chicken (1 kg)"
+        },
+        {
+          "name": "Grilled Chicken (Portion)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Grilled Chicken (Portion)"
+        },
+        {
+          "name": "Grilled Wings (1 kg)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Grilled Wings (1 kg)"
+        },
+        {
+          "name": "Grilled Wings (Portion)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "Grilled Wings (Portion)"
+        },
+        {
+          "name": "Mixed Grill (1 kg)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Mixed Grill (1 kg)"
+        },
+        {
+          "name": "Mixed Grill (Portion)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "Mixed Grill (Portion)"
+        }
+      ]
+    },
+    {
+      "id": "deniz-urunleri",
+      "title": "Seafood",
+      "items": [
+        {
+          "name": "Sea Bass with Cheese",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Sea Bass with Cheese"
+        },
+        {
+          "name": "Steamed Sea Bass",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Steamed Sea Bass"
+        },
+        {
+          "name": "Grilled Sea Bass",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Grilled Sea Bass"
+        },
+        {
+          "name": "Fried Whiting",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Fried Whiting"
+        },
+        {
+          "name": "Steamed Whiting",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Steamed Whiting"
+        },
+        {
+          "name": "Fried Horse Mackerel",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Fried Horse Mackerel"
+        },
+        {
+          "name": "Red Mullet",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Red Mullet"
+        },
+        {
+          "name": "Sea Bream",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Sea Bream"
+        },
+        {
+          "name": "Bonito",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Bonito"
+        },
+        {
+          "name": "Salmon",
+          "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&h=400&fit=crop&q=80",
+          "alt": "Salmon"
+        },
+        {
+          "name": "Trout",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "Trout"
+        }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "title": "Desserts",
+      "items": [
+        {
+          "name": "Baklava",
+          "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&h=400&fit=crop&q=80",
+          "alt": "Baklava"
+        },
+        {
+          "name": "Baked Rice Pudding",
+          "image": "https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=600&h=400&fit=crop&q=80",
+          "alt": "Baked Rice Pudding"
+        },
+        {
+          "name": "Kadayıf with Milk",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "Kadayıf with Milk"
+        },
+        {
+          "name": "Pumpkin Dessert",
+          "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&h=400&fit=crop&q=80",
+          "alt": "Pumpkin Dessert"
+        },
+        {
+          "name": "Künefe",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "Künefe"
+        },
+        {
+          "name": "Fried Ice Cream",
+          "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&h=400&fit=crop&q=80",
+          "alt": "Fried Ice Cream"
+        }
+      ]
+    },
+    {
+      "id": "icecekler",
+      "title": "Beverages",
+      "subcategories": [
+        {
+          "name": "Hot Drinks",
+          "items": [
+            {
+              "name": "Tea",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Tea"
+            },
+            {
+              "name": "Samovar Tea (Small)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Samovar Tea (Small)"
+            },
+            {
+              "name": "Samovar Tea (Large)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Samovar Tea (Large)"
+            },
+            {
+              "name": "Herbal Tea",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Herbal Tea"
+            },
+            {
+              "name": "Salep",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "Salep"
+            },
+            {
+              "name": "Nescafe",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "Nescafe"
+            },
+            {
+              "name": "Turkish Coffee",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "Turkish Coffee"
+            }
+          ]
+        },
+        {
+          "name": "Cold Drinks",
+          "items": [
+            {
+              "name": "Cola / Fanta",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Cola / Fanta"
+            },
+            {
+              "name": "Fruit Juice",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Fruit Juice"
+            },
+            {
+              "name": "Ice Tea",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ice Tea"
+            },
+            {
+              "name": "Soda (Plain)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Soda (Plain)"
+            },
+            {
+              "name": "Soda (Flavored)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Soda (Flavored)"
+            },
+            {
+              "name": "Ayran (Large)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ayran (Large)"
+            },
+            {
+              "name": "Ayran (Small)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Ayran (Small)"
+            },
+            {
+              "name": "Water (Large)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Water (Large)"
+            },
+            {
+              "name": "Water (Small)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Water (Small)"
+            },
+            {
+              "name": "Şalgam (Turnip Juice)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "Şalgam (Turnip Juice)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gayeli-kuru-fasulye",
+      "title": "Famous Gayeli White Beans",
+      "items": [
+        {
+          "name": "Buttered Rice",
+          "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop&q=80",
+          "alt": "Buttered Rice"
+        },
+        {
+          "name": "Yogurt",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "Yogurt"
+        },
+        {
+          "name": "Cacık (Yogurt with Cucumber)",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "Cacık (Yogurt with Cucumber)"
+        },
+        {
+          "name": "Pickles",
+          "image": "https://images.unsplash.com/photo-1570626097332-50c1e7eeb42b?w=600&h=400&fit=crop&q=80",
+          "alt": "Pickles"
+        }
+      ]
+    },
+    {
+      "id": "yoresel",
+      "title": "Local Specialties",
+      "items": [
+        {
+          "name": "Stuffed Cabbage Rolls",
+          "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=400&fit=crop&q=80",
+          "alt": "Stuffed Cabbage Rolls"
+        },
+        {
+          "name": "Sautéed Pickles",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "Sautéed Pickles"
+        },
+        {
+          "name": "Kaygana",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "Kaygana"
+        }
+      ]
+    },
+    {
+      "id": "nargile",
+      "title": "Hookah",
+      "items": []
+    }
+  ]
+}

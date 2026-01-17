@@ -1,0 +1,505 @@
+{
+  "categories": [
+    {
+      "id": "kahvaltilar",
+      "title": "الإفطار",
+      "items": [
+        {
+          "name": "فطور مشكّل (لشخصين)",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "فطور مشكّل (لشخصين)"
+        },
+        {
+          "name": "طبق فطور",
+          "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&q=80",
+          "alt": "طبق فطور"
+        }
+      ]
+    },
+    {
+      "id": "kahvalti-ekstralari",
+      "title": "إضافات الإفطار",
+      "items": [
+        {
+          "name": "كويماك (صغير)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "كويماك (صغير)"
+        },
+        {
+          "name": "كويماك (كبير)",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop&q=80",
+          "alt": "كويماك (كبير)"
+        },
+        {
+          "name": "مينيمين (صغير)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "مينيمين (صغير)"
+        },
+        {
+          "name": "مينيمين (كبير)",
+          "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop&q=80",
+          "alt": "مينيمين (كبير)"
+        },
+        {
+          "name": "لحم سوتيه (صغير)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "لحم سوتيه (صغير)"
+        },
+        {
+          "name": "لحم سوتيه (كبير)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "لحم سوتيه (كبير)"
+        },
+        {
+          "name": "كايغانا (سادة)",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "كايغانا (سادة)"
+        },
+        {
+          "name": "كايغانا (بالجبن)",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "كايغانا (بالجبن)"
+        },
+        {
+          "name": "بيض مسلوق",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "بيض مسلوق"
+        },
+        {
+          "name": "بيض بالمقلاة",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "بيض بالمقلاة"
+        },
+        {
+          "name": "بيض مع سجق",
+          "image": "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=600&h=400&fit=crop&q=80",
+          "alt": "بيض مع سجق"
+        },
+        {
+          "name": "سجق بالمقلاة",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "سجق بالمقلاة"
+        },
+        {
+          "name": "سيجارا بوريك",
+          "image": "https://images.unsplash.com/photo-1609501676725-7186f3a1f24f?w=600&h=400&fit=crop&q=80",
+          "alt": "سيجارا بوريك"
+        },
+        {
+          "name": "طبق جبن",
+          "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&h=400&fit=crop&q=80",
+          "alt": "طبق جبن"
+        }
+      ]
+    },
+    {
+      "id": "gozlemeler",
+      "title": "جوزلمة",
+      "items": [
+        {
+          "name": "جوزلمة (جبن)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "جوزلمة (جبن)"
+        },
+        {
+          "name": "جوزلمة (بطاطس)",
+          "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&h=400&fit=crop&q=80",
+          "alt": "جوزلمة (بطاطس)"
+        }
+      ]
+    },
+    {
+      "id": "salatalar",
+      "title": "سلطات",
+      "items": [
+        {
+          "name": "سلطة الراعي",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "سلطة الراعي"
+        },
+        {
+          "name": "سلطة موسمية",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "سلطة موسمية"
+        },
+        {
+          "name": "سلطة مشكلة",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "سلطة مشكلة"
+        },
+        {
+          "name": "بيياز (سلطة الفاصوليا)",
+          "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+          "alt": "بيياز (سلطة الفاصوليا)"
+        }
+      ]
+    },
+    {
+      "id": "hamburger",
+      "title": "همبرغر",
+      "items": []
+    },
+    {
+      "id": "corbalar",
+      "title": "شوربات",
+      "items": [
+        {
+          "name": "شوربة إيزوغلين",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "شوربة إيزوغلين"
+        },
+        {
+          "name": "شوربة الكرنب الأسود",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&h=400&fit=crop&q=80",
+          "alt": "شوربة الكرنب الأسود"
+        },
+        {
+          "name": "شوربة سمك",
+          "image": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=600&h=400&fit=crop&q=80",
+          "alt": "شوربة سمك"
+        }
+      ]
+    },
+    {
+      "id": "izgaralar",
+      "title": "مشاوي",
+      "items": [
+        {
+          "name": "كفتة أكشاآبات (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "كفتة أكشاآبات (1 كغ)"
+        },
+        {
+          "name": "كفتة أكشاآبات (حصة)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "كفتة أكشاآبات (حصة)"
+        },
+        {
+          "name": "ريش لحم ضأن (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "ريش لحم ضأن (1 كغ)"
+        },
+        {
+          "name": "ريش لحم ضأن (حصة)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "ريش لحم ضأن (حصة)"
+        },
+        {
+          "name": "شيش طاووق (حصة)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "شيش طاووق (حصة)"
+        },
+        {
+          "name": "شيش لحم (حصة)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "شيش لحم (حصة)"
+        },
+        {
+          "name": "شيش ضأن (حصة)",
+          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop&q=80",
+          "alt": "شيش ضأن (حصة)"
+        },
+        {
+          "name": "ساج قاورما (حصة)",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "ساج قاورما (حصة)"
+        },
+        {
+          "name": "طاووق سوتيه (حصة)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "طاووق سوتيه (حصة)"
+        },
+        {
+          "name": "ريش لحم بقري (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "ريش لحم بقري (1 كغ)"
+        },
+        {
+          "name": "ريش لحم بقري (حصة)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "ريش لحم بقري (حصة)"
+        },
+        {
+          "name": "دجاج مشوي (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "دجاج مشوي (1 كغ)"
+        },
+        {
+          "name": "دجاج مشوي (حصة)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "دجاج مشوي (حصة)"
+        },
+        {
+          "name": "أجنحة مشوية (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "أجنحة مشوية (1 كغ)"
+        },
+        {
+          "name": "أجنحة مشوية (حصة)",
+          "image": "https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=600&h=400&fit=crop&q=80",
+          "alt": "أجنحة مشوية (حصة)"
+        },
+        {
+          "name": "مشاوي مشكلة (1 كغ)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "مشاوي مشكلة (1 كغ)"
+        },
+        {
+          "name": "مشاوي مشكلة (حصة)",
+          "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop&q=80",
+          "alt": "مشاوي مشكلة (حصة)"
+        }
+      ]
+    },
+    {
+      "id": "deniz-urunleri",
+      "title": "مأكولات بحرية",
+      "items": [
+        {
+          "name": "قاروص بالجبن",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "قاروص بالجبن"
+        },
+        {
+          "name": "قاروص مطهو على البخار",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "قاروص مطهو على البخار"
+        },
+        {
+          "name": "قاروص مشوي",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "قاروص مشوي"
+        },
+        {
+          "name": "مزغيت مقلي",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "مزغيت مقلي"
+        },
+        {
+          "name": "مزغيت مطهو على البخار",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "مزغيت مطهو على البخار"
+        },
+        {
+          "name": "إسطافريت مقلي",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "إسطافريت مقلي"
+        },
+        {
+          "name": "سلطان إبراهيم",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "سلطان إبراهيم"
+        },
+        {
+          "name": "دنيس",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "دنيس"
+        },
+        {
+          "name": "بلاموت",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "بلاموت"
+        },
+        {
+          "name": "سلمون",
+          "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&h=400&fit=crop&q=80",
+          "alt": "سلمون"
+        },
+        {
+          "name": "تروت",
+          "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600&h=400&fit=crop&q=80",
+          "alt": "تروت"
+        }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "title": "حلويات",
+      "items": [
+        {
+          "name": "بقلاوة",
+          "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&h=400&fit=crop&q=80",
+          "alt": "بقلاوة"
+        },
+        {
+          "name": "رز بالحليب بالفرن",
+          "image": "https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=600&h=400&fit=crop&q=80",
+          "alt": "رز بالحليب بالفرن"
+        },
+        {
+          "name": "قدايف بالحليب",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "قدايف بالحليب"
+        },
+        {
+          "name": "حلوى اليقطين",
+          "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&h=400&fit=crop&q=80",
+          "alt": "حلوى اليقطين"
+        },
+        {
+          "name": "كنافة",
+          "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&h=400&fit=crop&q=80",
+          "alt": "كنافة"
+        },
+        {
+          "name": "آيس كريم مقلي",
+          "image": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&h=400&fit=crop&q=80",
+          "alt": "آيس كريم مقلي"
+        }
+      ]
+    },
+    {
+      "id": "icecekler",
+      "title": "مشروبات",
+      "subcategories": [
+        {
+          "name": "مشروبات ساخنة",
+          "items": [
+            {
+              "name": "شاي",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "شاي"
+            },
+            {
+              "name": "شاي سماور (صغير)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "شاي سماور (صغير)"
+            },
+            {
+              "name": "شاي سماور (كبير)",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "شاي سماور (كبير)"
+            },
+            {
+              "name": "شاي أعشاب",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "شاي أعشاب"
+            },
+            {
+              "name": "سحلب",
+              "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&h=400&fit=crop&q=80",
+              "alt": "سحلب"
+            },
+            {
+              "name": "نسكافيه",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "نسكافيه"
+            },
+            {
+              "name": "قهوة تركية",
+              "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop&q=80",
+              "alt": "قهوة تركية"
+            }
+          ]
+        },
+        {
+          "name": "مشروبات باردة",
+          "items": [
+            {
+              "name": "كولا / فانتا",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "كولا / فانتا"
+            },
+            {
+              "name": "عصير فواكه",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "عصير فواكه"
+            },
+            {
+              "name": "شاي مثلج",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "شاي مثلج"
+            },
+            {
+              "name": "صودا (سادة)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "صودا (سادة)"
+            },
+            {
+              "name": "صودا (منكهة)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "صودا (منكهة)"
+            },
+            {
+              "name": "عيران (كبير)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "عيران (كبير)"
+            },
+            {
+              "name": "عيران (صغير)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "عيران (صغير)"
+            },
+            {
+              "name": "ماء (كبير)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "ماء (كبير)"
+            },
+            {
+              "name": "ماء (صغير)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "ماء (صغير)"
+            },
+            {
+              "name": "شلغم (عصير اللفت)",
+              "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600&h=400&fit=crop&q=80",
+              "alt": "شلغم (عصير اللفت)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gayeli-kuru-fasulye",
+      "title": "فاصوليا غايلي الشهيرة",
+      "items": [
+        {
+          "name": "أرز بالزبدة",
+          "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop&q=80",
+          "alt": "أرز بالزبدة"
+        },
+        {
+          "name": "زبادي",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "زبادي"
+        },
+        {
+          "name": "جاجق",
+          "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&h=400&fit=crop&q=80",
+          "alt": "جاجق"
+        },
+        {
+          "name": "مخللات",
+          "image": "https://images.unsplash.com/photo-1570626097332-50c1e7eeb42b?w=600&h=400&fit=crop&q=80",
+          "alt": "مخللات"
+        }
+      ]
+    },
+    {
+      "id": "yoresel",
+      "title": "أطباق محلية",
+      "items": [
+        {
+          "name": "ملفوف محشي",
+          "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&h=400&fit=crop&q=80",
+          "alt": "ملفوف محشي"
+        },
+        {
+          "name": "مخللات سوتيه",
+          "image": "https://images.unsplash.com/photo-1598515213692-2e7f96c45dc8?w=600&h=400&fit=crop&q=80",
+          "alt": "مخللات سوتيه"
+        },
+        {
+          "name": "كايغانا",
+          "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&h=400&fit=crop&q=80",
+          "alt": "كايغانا"
+        }
+      ]
+    },
+    {
+      "id": "nargile",
+      "title": "شيشة",
+      "items": []
+    }
+  ]
+}

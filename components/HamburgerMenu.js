@@ -1,13 +1,27 @@
-import { useState, useEffect } from 'react';
-import menuData from '../data/menu.json';
+import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
+import { createTranslator, getLocale } from '../lib/i18n';
+import { getMenuData } from '../lib/menuData';
 
 export default function HamburgerMenu() {
+  const router = useRouter();
+  const locale = getLocale(router.locale || router.defaultLocale);
+  const t = createTranslator(locale);
+  const menuData = getMenuData(locale);
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    const newState = !isOpen;
+    setIsOpen(newState);
     // Body scroll'u kilitle/aç
-    if (!isOpen) {
+    if (newState) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -24,30 +38,44 @@ export default function HamburgerMenu() {
     }
   };
 
+  // ESC ile kapat
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        document.body.style.overflow = 'unset';
+      }
+    };
+
+    if (isOpen) document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isOpen]);
+
   // Menü dışına tıklandığında kapat
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (isOpen && !e.target.closest('.hamburger-menu')) {
+      if (isOpen && containerRef.current && !containerRef.current.contains(e.target)) {
         setIsOpen(false);
         document.body.style.overflow = 'unset';
       }
     };
 
     if (isOpen) {
-      document.addEventListener('click', handleClickOutside);
+      document.addEventListener('pointerdown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('pointerdown', handleClickOutside);
     };
   }, [isOpen]);
 
   return (
-    <>
+    <div ref={containerRef} className="hamburger-menu">
       <button 
         className={`hamburger-btn ${isOpen ? 'active' : ''}`}
         onClick={toggleMenu}
-        aria-label="Menü"
+        aria-label={t('menuAriaLabel')}
+        type="button"
       >
         <span></span>
         <span></span>
@@ -55,13 +83,21 @@ export default function HamburgerMenu() {
       </button>
 
       {isOpen && (
-        <div className="hamburger-overlay" onClick={toggleMenu}></div>
+        <div 
+          className="hamburger-overlay show"
+          onClick={toggleMenu}
+        ></div>
       )}
 
       <nav className={`hamburger-nav ${isOpen ? 'open' : ''}`}>
         <div className="hamburger-header">
-          <h3>Kategoriler</h3>
-          <button className="close-btn" onClick={toggleMenu} aria-label="Kapat">
+          <h3>{t('categories')}</h3>
+          <button 
+            className="close-btn" 
+            onClick={toggleMenu} 
+            aria-label={t('closeAriaLabel')}
+            type="button"
+          >
             ✕
           </button>
         </div>
@@ -71,6 +107,7 @@ export default function HamburgerMenu() {
               <button
                 onClick={() => scrollToCategory(category.id)}
                 className="category-link"
+                type="button"
               >
                 {category.title}
               </button>
@@ -78,172 +115,6 @@ export default function HamburgerMenu() {
           ))}
         </ul>
       </nav>
-
-      <style jsx>{`
-        .hamburger-btn {
-          display: none;
-          flex-direction: column;
-          justify-content: space-around;
-          width: 32px;
-          height: 32px;
-          background: transparent;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-          z-index: 1001;
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          transition: all 0.3s ease;
-        }
-
-        .hamburger-btn span {
-          width: 28px;
-          height: 3px;
-          background: var(--accent);
-          border-radius: 3px;
-          transition: all 0.3s ease;
-          transform-origin: center;
-        }
-
-        .hamburger-btn.active span:nth-child(1) {
-          transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .hamburger-btn.active span:nth-child(2) {
-          opacity: 0;
-        }
-
-        .hamburger-btn.active span:nth-child(3) {
-          transform: rotate(-45deg) translate(8px, -8px);
-        }
-
-        .hamburger-overlay {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.7);
-          z-index: 998;
-          animation: fadeIn 0.3s ease;
-        }
-
-        .hamburger-nav {
-          display: none;
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 280px;
-          max-width: 80vw;
-          height: 100vh;
-          background: var(--card);
-          backdrop-filter: blur(20px);
-          z-index: 999;
-          transition: right 0.3s ease;
-          overflow-y: auto;
-          box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .hamburger-nav.open {
-          right: 0;
-        }
-
-        .hamburger-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 20px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          background: rgba(10, 10, 10, 0.8);
-          position: sticky;
-          top: 0;
-          z-index: 1;
-        }
-
-        .hamburger-header h3 {
-          margin: 0;
-          color: var(--accent);
-          font-size: 18px;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-        }
-
-        .close-btn {
-          background: transparent;
-          border: none;
-          color: var(--text);
-          font-size: 28px;
-          cursor: pointer;
-          padding: 0;
-          width: 32px;
-          height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: transform 0.2s ease;
-        }
-
-        .close-btn:hover {
-          transform: rotate(90deg);
-          color: var(--accent);
-        }
-
-        .hamburger-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .hamburger-list li {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .category-link {
-          display: block;
-          width: 100%;
-          padding: 18px 20px;
-          background: transparent;
-          border: none;
-          color: var(--text);
-          font-size: 16px;
-          font-weight: 500;
-          text-align: left;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          font-family: 'Poppins', sans-serif;
-        }
-
-        .category-link:hover {
-          background: var(--card-hover);
-          color: var(--accent);
-          padding-left: 28px;
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .hamburger-btn {
-            display: flex;
-          }
-
-          .hamburger-overlay {
-            display: block;
-          }
-
-          .hamburger-nav {
-            display: block;
-          }
-        }
-      `}</style>
-    </>
+    </div>
   );
 }

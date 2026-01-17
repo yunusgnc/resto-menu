@@ -1,7 +1,11 @@
 import Category from './Category';
-import menuData from '../data/menu.json';
+import { useRouter } from 'next/router';
+import { getMenuData } from '../lib/menuData';
 
 export default function Menu() {
+  const router = useRouter();
+  const menuData = getMenuData(router.locale || router.defaultLocale);
+
   return (
     <section>
       {menuData.categories.map((category, index) => (

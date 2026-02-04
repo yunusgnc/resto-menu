@@ -92,14 +92,6 @@ export default function HamburgerMenu() {
       <nav className={`hamburger-nav ${isOpen ? 'open' : ''}`}>
         <div className="hamburger-header">
           <h3>{t('categories')}</h3>
-          <button 
-            className="close-btn" 
-            onClick={toggleMenu} 
-            aria-label={t('closeAriaLabel')}
-            type="button"
-          >
-            ✕
-          </button>
         </div>
         <ul className="hamburger-list">
           {menuData.categories.map((category) => (

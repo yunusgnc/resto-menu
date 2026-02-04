@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import Menu from '../components/Menu';
 import HamburgerMenu from '../components/HamburgerMenu';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import CategoryFilter from '../components/CategoryFilter';
+import ScrollToTop from '../components/ScrollToTop';
 import { createTranslator, getLocale } from '../lib/i18n';
 
 export default function Home() {
@@ -25,11 +27,15 @@ export default function Home() {
         <h1>{t('menuHeading')}</h1>
       </header>
 
+      <CategoryFilter />
+
       <Menu />
 
       <footer>
         {t('footer')}
       </footer>
+
+      <ScrollToTop />
     </>
   );
 }

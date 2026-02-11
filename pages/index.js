@@ -5,6 +5,7 @@ import HamburgerMenu from '../components/HamburgerMenu';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import CategoryFilter from '../components/CategoryFilter';
 import ScrollToTop from '../components/ScrollToTop';
+import Logo from '../components/Logo';
 import { createTranslator, getLocale } from '../lib/i18n';
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
       <HamburgerMenu />
 
       <header>
-        <h1>{t('menuHeading')}</h1>
+        <Logo className="header-logo" />
       </header>
 
       <CategoryFilter />

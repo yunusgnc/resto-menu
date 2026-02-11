@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
       // No saved preference, save the default (Turkish)
       saveLanguage(DEFAULT_LOCALE);
     }
-  }, []);
+  }, [router]);
 
   useEffect(() => {
     const locale = getLocale(router.locale || router.defaultLocale);

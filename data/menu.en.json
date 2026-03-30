@@ -5,12 +5,16 @@
       "title": "Breakfast",
       "items": [
         {
-          "name": "Mixed Breakfast (for 2)",
-          "alt": "Mixed Breakfast"
-        },
-        {
           "name": "Breakfast Plate",
           "alt": "Breakfast Plate"
+        },
+        {
+          "name": "Village Breakfast (for 2)",
+          "alt": "Village Breakfast"
+        },
+        {
+          "name": "Village Breakfast (single)",
+          "alt": "Village Breakfast Single"
         }
       ]
     },
@@ -73,6 +77,10 @@
         {
           "name": "Cheese Plate",
           "alt": "Cheese Plate"
+        },
+        {
+          "name": "Chips",
+          "alt": "Chips"
         }
       ]
     },
@@ -86,7 +94,7 @@
         },
         {
           "name": "Gozleme (Potato)",
-          "alt": "Gozleme Potato"
+          "alt": "Gozleme with Potato"
         }
       ]
     },
@@ -145,6 +153,10 @@
           "alt": "Saç Kavurma Portion"
         },
         {
+          "name": "Saç Kavurma (Double)",
+          "alt": "Saç Kavurma Double"
+        },
+        {
           "name": "Chicken Sauté (Portion)",
           "alt": "Chicken Sauté Portion"
         },
@@ -157,16 +169,16 @@
           "alt": "Beef Chops Portion"
         },
         {
-          "name": "Grilled Chicken (1 kg)",
-          "alt": "Grilled Chicken 1 kg"
+          "name": "Chicken Chop (1 kg)",
+          "alt": "Chicken Chop 1 kg"
         },
         {
-          "name": "Grilled Chicken (Portion)",
-          "alt": "Grilled Chicken Portion"
+          "name": "Chicken Chop (Portion)",
+          "alt": "Chicken Chop Portion"
         },
         {
-          "name": "Grilled Wings (1 kg)",
-          "alt": "Grilled Wings 1 kg"
+          "name": "Chicken Wings (1 kg)",
+          "alt": "Chicken Wings 1 kg"
         },
         {
           "name": "Grilled Wings (Portion)",
@@ -295,13 +307,30 @@
         {
           "name": "Piyaz (Bean Salad)",
           "alt": "Piyaz"
+        },
+        {
+          "name": "Small Salad",
+          "alt": "Small Salad"
         }
       ]
     },
     {
-      "id": "hamburger",
-      "title": "Hamburger",
-      "items": []
+      "id": "fast-food",
+      "title": "Fast Food & Snacks",
+      "items": [
+        {
+          "name": "Pizza",
+          "alt": "Pizza"
+        },
+        {
+          "name": "Hamburger",
+          "alt": "Hamburger"
+        },
+        {
+          "name": "Toast",
+          "alt": "Toast"
+        }
+      ]
     },
     {
       "id": "tatlilar",
@@ -341,8 +370,12 @@
           "name": "Hot Drinks",
           "items": [
             {
-              "name": "Tea",
-              "alt": "Tea"
+              "name": "Tea (glass)",
+              "alt": "Tea glass"
+            },
+            {
+              "name": "Tea (cup)",
+              "alt": "Tea cup"
             },
             {
               "name": "Samovar Tea (Small)",
@@ -367,6 +400,10 @@
             {
               "name": "Turkish Coffee",
               "alt": "Turkish Coffee"
+            },
+            {
+              "name": "Hot Chocolate",
+              "alt": "Hot Chocolate"
             }
           ]
         },

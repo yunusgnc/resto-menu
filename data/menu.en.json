@@ -359,6 +359,38 @@
         {
           "name": "Fried Ice Cream",
           "alt": "Fried Ice Cream"
+        },
+        {
+          "name": "Lemon Cheesecake",
+          "alt": "Lemon Cheesecake"
+        },
+        {
+          "name": "Raspberry Cheesecake",
+          "alt": "Raspberry Cheesecake"
+        },
+        {
+          "name": "San Sebastian Cheesecake",
+          "alt": "San Sebastian Cheesecake"
+        },
+        {
+          "name": "Tiramisu",
+          "alt": "Tiramisu"
+        },
+        {
+          "name": "Nutella Cake",
+          "alt": "Nutella Cake"
+        },
+        {
+          "name": "Cookie Pie",
+          "alt": "Cookie Pie"
+        },
+        {
+          "name": "Marlenka",
+          "alt": "Marlenka"
+        },
+        {
+          "name": "Chocolate Souffle",
+          "alt": "Chocolate Souffle"
         }
       ]
     },

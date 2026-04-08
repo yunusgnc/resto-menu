@@ -259,7 +259,8 @@
         {
           "name": "Kanat Izgara (Porsiyon)",
           "image": "https://cdn.getiryemek.com/products/1630870798932_500x375.jpeg",
-          "alt": "Kanat Izgara Porsiyon"
+          "alt": "Kanat Izgara Porsiyon",
+          "price": 450
         },
         {
           "name": "Karışık Izgara (1 kg)",
@@ -312,7 +313,8 @@
         {
           "name": "İstavrit Tava",
           "image": "https://cemilhoca.com.tr/qr/wp-content/uploads/2024/11/istavrittavau.webp",
-          "alt": "İstavrit Tava"
+          "alt": "İstavrit Tava",
+          "price": 450
         },
         {
           "name": "Barbun",
@@ -504,6 +506,54 @@
           "name": "Kızarmış Dondurma",
           "image": "https://www.bizimmutfak.com.tr/wp-content/uploads/2023/09/kizarmis-dondurma.jpg",
           "alt": "Kızarmış Dondurma",
+          "price": 300
+        },
+        {
+          "name": "Limonlu Cheesecake",
+          "image": "https://birzamanlar.tubatux.com/wp-content/uploads/2022/04/limonlu-cheesecake-dilim-160-g.png",
+          "alt": "Limonlu Cheesecake",
+          "price": 250
+        },
+        {
+          "name": "Frambuazlı Cheesecake",
+          "image": "https://www.pastanbul.com.tr/wp-content/uploads/2024/06/butun_frambuazlicheesecake-min.jpg",
+          "alt": "Frambuazlı Cheesecake",
+          "price": 250
+        },
+        {
+          "name": "San Sebastian",
+          "image": "https://visitistanbulofficial.com/wp-content/uploads/2025/04/san-sebastian-cheesecake-istanbul.webp",
+          "alt": "San Sebastian",
+          "price": 250
+        },
+        {
+          "name": "Tiramisu",
+          "image": "https://www.micheldumas.com/wp-content/uploads/2025/05/tiramisu1-ezgif.com-jpg-to-webp-converter-1-1.webp",
+          "alt": "Tiramisu",
+          "price": 250
+        },
+        {
+          "name": "Nutellalı Pasta",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXsoaTd9_aSKj3Ei1VHDaZknXDxoun8B4TjQ&s",
+          "alt": "Nutellalı Pasta",
+          "price": 300
+        },
+        {
+          "name": "Cookie Pie",
+          "image": "https://yeyfood.com/wp-content/uploads/2024/07/WEB1nutella_stuffed_choclate_chip_cookie_pie._slice_on_7f204e2b-8fcf-4710-ac2d-df893a4f2e3c_3-735x735.jpg",
+          "alt": "Cookie Pie",
+          "price": 250
+        },
+        {
+          "name": "Marlenka",
+          "image": "https://img-s1.onedio.com/id-61bc3dc730a3fb4d6ebf844f/rev-0/w-600/h-502/f-jpg/s-ff4cafd28f9e8fcc9722370d68a8ea3c75ebe9db.jpg",
+          "alt": "Marlenka",
+          "price": 250
+        },
+        {
+          "name": "Süfle",
+          "image": "https://i.tmgrup.com.tr/sfr/2024/08/06/kolay-sufle-tarifi-1722940926858.jpg",
+          "alt": "Süfle",
           "price": 300
         }
       ]

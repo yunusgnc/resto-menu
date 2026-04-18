@@ -176,7 +176,7 @@
           "name": "Akçaabat Köfte (Porsiyon)",
           "image": "https://cemilhoca.com.tr/qr/wp-content/uploads/2024/11/Akcaabat-Kofte.webp",
           "alt": "Akçaabat Köfte Porsiyon",
-          "price": 500
+          "price": 600
         },
         {
           "name": "Kuzu Pirzola (1 kg)",
@@ -188,7 +188,7 @@
           "name": "Kuzu Pirzola (Porsiyon)",
           "image": "https://m.ftscrt.com/food/b75a3996-f455-406c-a339-95a50b966e81.jpg",
           "alt": "Kuzu Pirzola Porsiyon",
-          "price": 650
+          "price": 750
         },
         {
           "name": "Tavuk Şiş (Porsiyon)",
@@ -212,13 +212,13 @@
           "name": "Saç Kavurma (Porsiyon)",
           "image": "https://cdn.getiryemek.com/restaurants/1741094923577_1125x522.webp",
           "alt": "Saç Kavurma Porsiyon",
-          "price": 550
+          "price": 500
         },
         {
           "name": "Saç Kavurma (Duble)",
           "image": "https://cdn.getiryemek.com/restaurants/1741094923577_1125x522.webp",
           "alt": "Saç Kavurma Duble",
-          "price": 1100
+          "price": 1200
         },
         {
           "name": "Tavuk Kavurma (Porsiyon)",
@@ -248,7 +248,7 @@
           "name": "Tavuk Pirzola (Porsiyon)",
           "image": "https://www.ensarpilic.net/panel/Sayfalar/urunler/bag-192.jpg",
           "alt": "Tavuk Pirzola Porsiyon",
-          "price": 400
+          "price": 500
         },
         {
           "name": "Tavuk Kanat (1 kg)",
@@ -272,7 +272,7 @@
           "name": "Karışık Izgara (Porsiyon)",
           "image": "https://yakaetlokantasi.com/storage/images/Ruq3mpL7yRNWYkGT.JPG",
           "alt": "Karışık Izgara Porsiyon",
-          "price": 600
+          "price": 800
         }
       ]
     },
@@ -284,19 +284,19 @@
           "name": "Levrek Kaşarlı",
           "image": "https://i.ytimg.com/vi/GbIoxRVmAEQ/sddefault.jpg",
           "alt": "Levrek Kaşarlı",
-          "price": 600
+          "price": 800
         },
         {
           "name": "Levrek Buğlama",
           "image": "https://i.ytimg.com/vi/MzveA0xgCEQ/maxresdefault.jpg",
           "alt": "Levrek Buğlama",
-          "price": 550
+          "price": 800
         },
         {
           "name": "Levrek Izgara",
           "image": "https://pastell.qrmenum.app/img/yuklenen/buyuk-levrek-izgara-7236.jpg",
           "alt": "Levrek Izgara",
-          "price": 500
+          "price": 700
         },
         {
           "name": "Mezgit Tava",
@@ -326,7 +326,7 @@
           "name": "Çipura",
           "image": "https://gokteada.com.tr/wp-content/uploads/2017/10/%C3%A7ipura.jpg",
           "alt": "Çipura",
-          "price": 550
+          "price": 700
         },
         {
           "name": "Palamut",
@@ -338,7 +338,7 @@
           "name": "Somon",
           "image": "https://image.hurimg.com/i/hurriyet/90/0x0/64c354274e3fe11e2038f480.jpg",
           "alt": "Somon",
-          "price": 550
+          "price": 700
         },
         {
           "name": "Alabalık",
@@ -573,7 +573,7 @@
             },
             {
               "name": "Fincan Çay",
-              "image": "https://www.eliteworldhotels.com.tr/Upload/638998566266972210_840721d6.jpg",
+              "image": "https://okey.gamezonemenu.com/resimler/urunler/1669480290-63823f62f41eb.jpg",
               "alt": "Fincan Çay",
               "price": 40
             },
